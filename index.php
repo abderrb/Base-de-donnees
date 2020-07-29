@@ -46,6 +46,8 @@ $liste = $query->fetchAll(PDO::FETCH_ASSOC);
 
 ?>
 
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -68,6 +70,7 @@ $liste = $query->fetchAll(PDO::FETCH_ASSOC);
                 <th>prenom</th>
                 <th>age</th>
                 <th>Action</th>
+                <th>Supprimer</th>
             </tr>
         </thead>
         <tbody>
@@ -80,6 +83,7 @@ $liste = $query->fetchAll(PDO::FETCH_ASSOC);
                     <td><?= $personne['prenom'] ?></td>
                     <td><?= $personne['age'] ?></td>
                     <td><a href="modifier.php?id=<?= $personne['id'] ?>">Modifier</a></td>
+                    <td><a href="supprimer.php?id=<?= $personne['id'] ?>">Supprimer</a></td>
                 </tr>
             <?php
             endforeach;
